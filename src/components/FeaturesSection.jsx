@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './FeaturesSection.css'
 
-const base = '/skycast-weather-app/'
+const base = import.meta.env.BASE_URL
 
 const images = [
   { src: `${base}sun.jpg`, label: 'UV Index' },
