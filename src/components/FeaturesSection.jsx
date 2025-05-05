@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import './FeaturesSection.css'
 
+const base = '/skycast-weather-app/'
+
 const images = [
-  { src: '/sun.jpg', label: 'UV Index' },
-  { src: '/rain.jpg', label: 'Rain Radar' },
-  { src: '/clouds.jpg', label: 'Cloud Types' },
-  { src: '/wind.jpg', label: 'Wind Speed' },
-  { src: '/snow.jpg', label: 'Snowfall Map' },
-  { src: '/storm.jpg', label: 'Storm Alerts' },
-  { src: '/fog.jpg', label: 'Fog Coverage' },
-  { src: '/moon.jpg', label: 'Moon Phase' },
-  { src: '/temperature.jpg', label: 'Temperature Map' },
-  { src: '/humidity.jpg', label: 'Humidity Levels' },
+  { src: `${base}sun.jpg`, label: 'UV Index' },
+  { src: `${base}rain.jpg`, label: 'Rain Radar' },
+  { src: `${base}clouds.jpg`, label: 'Cloud Types' },
+  { src: `${base}wind.jpg`, label: 'Wind Speed' },
+  { src: `${base}snow.jpg`, label: 'Snowfall Map' },
+  { src: `${base}storm.jpg`, label: 'Storm Alerts' },
+  { src: `${base}fog.jpg`, label: 'Fog Coverage' },
+  { src: `${base}moon.jpg`, label: 'Moon Phase' },
+  { src: `${base}temperature.jpg`, label: 'Temperature Map' },
+  { src: `${base}humidity.jpg`, label: 'Humidity Levels' },
 ]
 
 const FeaturesSection = () => {
