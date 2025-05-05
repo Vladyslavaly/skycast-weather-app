@@ -1,0 +1,120 @@
+.header {
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 100, 180, 0.65), rgba(80, 0, 150, 0.65));
+  color: white;
+  padding: 16px 0;
+  z-index: 1000;
+}
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-logo,
+.header-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 4px;
+}
+.header-title {
+    font-size: 34px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(90deg, #ffdd00, #f72585, #7209b7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white; 
+    animation: shine-text 4s ease-in-out infinite;
+  }
+  @keyframes shine-text {
+    0% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
+  }
+.header-links {
+    display: flex;
+    justify-content: center; 
+    gap: 32px;               
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+.header-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+    font-family: "Source Code Pro", monospace;
+  }
+.header-links a:hover {
+    color: #ffffff;
+  }
+.header-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+  }
+.header-links a:hover::after {
+    width: 100%;
+  }
+.city-selector select {
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 14px;
+    border: none;
+  }
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+@media (max-width: 700px) {
+  .burger-btn {
+    display: block;
+  }
+  .header-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(112, 71, 120, 0.9);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .header-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
